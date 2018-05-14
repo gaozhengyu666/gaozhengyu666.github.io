@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        html, body {
+            max-width: 1600px;
+            /*height: 10000px;*/
+        }
+
+        .center {
+            margin: 0 auto;
+            max-width: 964px;
+            height: 100%;
+        }
+
+        .center2 {
+            margin: 0 auto;
+            max-width: 1046px;
+            height: 400px;
+        }
+
+        header {
+            color: white;
+            width: 100%;
+            max-height: 990px;
+            background-image: url(tutu/ife_0000s_0002s_0002_图层-1.png);
+            /*background-color: rgba(255,255,0);*/
+        }
+
+        .bgc {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+
+        }
+
+        header .bgc h1 {
+            padding-top: 200px;
+            text-align: center;
+            padding-bottom: 80px;
+        }
+
+        header .bgc .center > p {
+            padding: 0 94px 106px 94px;
+            text-align: justify;
+        }
+
+        header .bgc .selfinfo {
+            /*margin-top: 38px;*/
+            width: 100%;
+            border-top: 1px solid #5F594B;
+            border: 1px solid #5F594B;
+        }
+
+        header .bgc .selfinfo h4 {
+            padding: 30px 0;
+            letter-spacing: 5px;
+            height: 54px;
+            line-height: 54px;
+            text-align: center;
+        }
+
+        header .bgc .selfinfo p {
+            text-align: center;
+            height: 60px;
+            line-height: 60px;
+            color: #625C4E;
+            font-size: 12px;
+        }
+
+        header .bgc .selfinfo form {
+            padding: 40px 94px;
+            text-align: justify;
+        }
+
+        header .bgc .selfinfo input {
+            padding-right: 30px;
+            height: 52px;
+            line-height: 52px;
+            padding-left: 18px;
+            background-color: #fff;
+            /*text-align: center;*/
+        }
+
+        header .bgc .selfinfo form input[type="text"] {
+            width: 292px;
+            background-color: transparent;
+
+        }
+
+        header .bgc .selfinfo form input[type="text"]:first-child::-webkit-input-placeholder {
+            color: white;
+        }
+
+        .ready .topword {
+            padding: 40px 60px;
+        }
+
+        .ready .topword p {
+            text-align: center;
+        }
+
+        .ready .topword h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .ready .details {
+            height: 250px;
+            /*border: 1px solid #000;*/
+        }
+
+        .ready .details > div {
+            width: 522px;
+            height: 118px;
+            /*background-color: pink;*/
+            /*border: 1px solid #000;*/
+            float: left;
+            padding-right: 20px;
+        }
+
+        .ready .details > div .left {
+            width: 64px;
+            height: 100%;
+            padding: 10px;
+            float: left;
+        }
+
+        .ready .details > div .right p {
+            padding-top: 10px;
+        }
+
+        .ready .details > div .right p:first-child {
+            font-weight: bolder;
+        }
+
+        .ready .details > div .right {
+            /*padding-left:64px;*/
+        }
+
+        .supportive {
+            width: 100%;
+            height: 800px;
+            background-image: url(tutu/ife_0002s_0002s_0005_图层-2.png);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .supportive .left {
+            width: 500px;
+            height: 600px;
+            float: left;
+            /*padding: 180px 80px;*/
+            margin: 180px 0px 0 156px;
+        }
+
+        .supportive .left form {
+            width: 500px;
+            height: 62px;
+        }
+
+        .supportive .left p {
+            color: #79837B;
+
+        }
+
+        .supportive .left p:first-child {
+            font-size: 40px;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .supportive .left input {
+            height: 62px;
+            width: 238px;
+            color: white;
+            margin-top: 40px;
+            margin-right: 10px;
+            background-color: transparent;
+            float: left;
+
+        }
+
+        .supportive .right {
+            width: 645px;
+            height: 600px;
+            background-color: #fff;
+            /*float: right;*/
+            position: absolute;
+            background-image: url(tutu/ife_0002s_0002s_0003_IPad.png);
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-size: 100% 100%;
+            top: 12.5%;
+            right: 0;
+        }
+
+        .supportive .right img {
+            position: absolute;
+            top: 5%;
+            right: 0;
+        }
+
+        .tryour {
+            padding-bottom: 50px;
+            border-bottom: 1px solid;
+            color: #79837B;
+            margin-bottom: 80px;
+
+        }
+
+        .tryour h2 {
+            height: 212px;
+            text-align: center;
+            line-height: 212px;
+        }
+
+        .tryour .cols3 {
+            display: flex;
+        }
+
+        .tryour .cols3 div {
+            flex: 1;
+        }
+
+        .tryour .cols3 div h3 {
+            text-align: center;
+        }
+
+        .tryour .cols3 div p {
+            padding: 10px 20px;
+        }
+
+        .pics .part1 {
+            display: flex;
+
+        }
+
+        .pics .part2 {
+            display: flex;
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        .pics img {
+            width: 570px;
+            height: 354px;
+
+        }
+
+        .pics .wenzi {
+            height: 354px;
+            padding: 60px 40px;
+        }
+
+        .pics .wenzi p:first-child {
+            font-size: 24px;
+            padding-bottom: 40px;
+        }
+
+        .ourawesom .center {
+            height: 1090px;
+            border: 1px solid #000;
+            /*text-align: center;*/
+        }
+
+        .ourawesome h1 {
+            text-align: center;
+        }
+
+        .ourawesome h1 + p {
+            width: 710px;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        .ourawesome .center>ul {
+            width: 100%;
+            height: 742px;
+        }
+
+        .ourawesome .center .big >li {
+            float: left;
+            width: 480px;
+            height: 344px;
+            /*border: 1px solid #000;*/
+            display: inline-block;
+            padding: 10px;
+        }
+
+        .ourawesome .mask {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .ourawesome .mask h4 {
+            margin-bottom:20px;
+        }
+
+        .ourawesome .mask li {
+            /*display:;*/
+            float: left;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            border: 1px solid #919191;
+            margin-right:10px;
+            line-height: 54px;
+            text-align:center;
+            /*border-color: #919191;*/
+        }
+        .ourawesome ul li .mask li a {
+            width: 60%;
+            height: 60%;
+            line-height:60%;
+        }
+
+        .ourawesome .center>ul >li {
+            position: relative;
+        }
+        .ourawesome .center>ul>li:hover .mask{
+            opacity: 1;
+        }
+        .ourawesome ul li .mask {
+            /*display: none;*/
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(101,101,101,0.8);
+            opacity: 0;
+        }
+
+        .ourawesome .big li >img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .contacts .center {
+            display: flex;
+        }
+
+        .contacts input {
+            width: 368px;
+            height: 50px;
+            display: block;
+            margin: 20px 0;
+            padding-left: 10px;
+
+        }
+
+        .contacts textarea {
+            width: 368px;
+            margin: 20px 0;
+            padding-left: 10px;
+            height: 145px;
+
+        }
+
+        .contacts input:nth-of-type(3) {
+            background-color: black;
+            color: white;
+        }
+
+        .contacts .connect1 {
+            flex: 1;
+            text-align: center;
+            justify-content: center; /*子元素水平居中*/
+            align-items: center; /*子元素垂直居中*/
+            display: flex;
+        }
+
+        .contacts .connect2 {
+            flex: 1;
+            padding: 84px 0 84px 84px;
+        }
+
+        .contacts .connect2 h1 {
+            margin: 20px 0;
+        }
+
+        .contacts .connect2 ul {
+            margin-top: 20px;
+        }
+
+        .contacts .connect2 li {
+            font-weight: 800;
+
+            display: flex;
+            /*border: 1px solid #000;*/
+            margin-bottom: 20px;
+        }
+
+        .contacts .connect2 img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        footer {
+            height: 406px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding-top: 88px;
+        }
+
+        footer .center > ul {
+            display: flex;
+        }
+
+        footer .center > ul > li {
+            flex: 1;
+        }
+
+        footer .center > ul > li > ul li {
+            height: 46px;
+            line-height: 46px;
+            color: #343434;
+        }
+
+        footer .center > ul > li > ul li img {
+            margin-right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="bgc">
+        <div class="center">
+            <h1>Hello World</h1>
+            <p>China is speeding up strategic plan,traffic rules,laws and regulations on accident-incurred liabilities
+                for its smart car industry,Economic information daily reported Thursday.</p>
+            <div class="selfinfo">
+                <h4>CREATE YOUR ACCOUNY</h4>
+                <P>IT IS ABSOLUTELY FREE </P>
+                <form action="">
+                    <input type="text" name="" id="" placeholder="denis@getcraftwork.com">
+                    <input type="text" placeholder="Create your password">
+                    <input type="submit" value="SIGN UP">
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="ready">
+    <div class="center2">
+        <div class="topword">
+            <p>BOATLOADS OF AWESOME</p>
+            <h1>
+                Ready-made,customizable,HTML landing page sections
+            </h1>
+        </div>
+        <div class="details">
+            <div class="box1">
+                <div class="left"><img src="tutu/ife_0001s_0001s_0000s_0000_Iphone-Icon.png" alt=""></div>
+                <div class="right">
+                    <p>Mobile First</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, itaque.</p>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="left"><img src="tutu/ife_0001s_0001s_0002s_0001_Check-Icon.png" alt=""></div>
+                <div class="right">
+                    <p>Mobile First</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, itaque.</p>
+                </div>
+            </div>
+            <div class="box3">
+                <div class="left"><img src="tutu/ife_0001s_0001s_0001s_0000_Pencil-Icon.png" alt=""></div>
+                <div class="right">
+                    <p>Mobile First</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, itaque.</p>
+                </div>
+            </div>
+            <div class="box4">
+                <div class="left"><img src="tutu/ife_0001s_0001s_0003s_0000_Settings-Icon.png" alt=""></div>
+                <div class="right">
+                    <p>Mobile First</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, itaque.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="supportive">
+    <div class="bgc">
+
+        <div class="left">
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aperiam dolorem illum, modi
+                non
+                officia possimus similique suscipit voluptatum.</p>
+            <form action="">
+                <input type="button" value="CHECK OUT FEATURES">
+                <input type="button" value="TRY PRODUCT FOR FREE">
+            </form>
+        </div>
+
+        <div class="right">
+            <img src="tutu/ife_0002s_0002s_0002_Screen.png" alt="">
+        </div>
+
+    </div>
+</section>
+<section class="tryour">
+    <div class="center">
+        <h2>Try our Awesome Products</h2>
+        <div class="cols3">
+            <div class="part1">
+                <h3><img src="tutu/ife_0003s_0001s_0000s_0000_Singleton.png" alt=""></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam beatae doloribus ea fuga
+                    harum iure labore libero numquam perferendis placeat quis quos repellat rerum sint, tenetur unde
+                    vero voluptates.40</p>
+            </div>
+            <div class="part2">
+                <h3><img src="tutu/ife_0003s_0001s_0001s_0000_Hero.png" alt=""></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam beatae doloribus ea fuga
+                    harum iure labore libero numquam perferendis placeat quis quos repellat rerum sint, tenetur unde
+                    vero voluptates.40</p>
+            </div>
+            <div class="part3">
+                <h3><img src="tutu/ife_0003s_0001s_0002s_0000_Portland.png" alt=""></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam beatae doloribus ea fuga
+                    harum iure labore libero numquam perferendis placeat quis quos repellat rerum sint, tenetur unde
+                    vero voluptates.40</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pics">
+    <div class="center">
+        <div class="part1">
+            <img src="tutu/ife_0004s_0000s_0000s_0000_图层-3.png" alt="">
+            <div class="wenzi">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolorum excepturi fugit hic minus
+                    nobis nulla quos ullam veniam voluptates?
+                </p>
+            </div>
+        </div>
+        <div class="part2">
+            <div class="wenzi">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci animi dolorem harum in nesciunt
+                    perspiciatis quibusdam recusandae saepe voluptatem!
+                </p>
+            </div>
+            <img src="tutu/ife_0004s_0001s_0000s_0000_图层-4.png" alt="">
+
+        </div>
+    </div>
+</section>
+<section class="ourawesome">
+    <div class="center">
+        <h1>Our Awesome Crew</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur doloremque earum laboriosam laborum nam
+            quis rem sed sunt veritatis voluptas.</p>
+        <ul class="big">
+            <li>
+                <img src="tutu/ife_0005s_0001s_0000s_0002_张思远大.png" alt="">
+                <div class="mask">
+                    <h1>Ethan Dutton</h1>
+                    <h4>Lorem ipsum dolor sit.</h4>
+                    <ul class="small">
+                        <li>
+                            <a href="#"><img src="tutu/ife_0005s_0001s_0000s_0001s_0000s_0000_Facebook-Icon.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="tutu/ife_0005s_0001s_0000s_0001s_0001s_0000_Twitter-Icon.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="tutu/ife_0005s_0001s_0000s_0001s_0002s_0000_Instagram-Icon.png" alt=""></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </li>
+            <li>
+                <img src="tutu/ife_0005s_0001s_0001s_0000_2.png" alt="">
+                <div class="mask">
+                    <h1>Ethan Dutton</h1>
+                    <h4>Lorem ipsum dolor sit.</h4>
+                    <ul class="small">
+                        <li>
+                            <a href="#"><img src="tutu/ife_0005s_0001s_0000s_0001s_0000s_0000_Facebook-Icon.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="tutu/ife_0005s_0001s_0000s_0001s_0001s_0000_Twitter-Icon.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="tutu/ife_0005s_0001s_0000s_0001s_0002s_0000_Instagram-Icon.png" alt=""></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </li>
+            <li><img src="tutu/ife_0005s_0001s_0002s_0000_3.png" alt="">
+                <div class="mask">
+                    <h1>Ethan Dutton</h1>
+                    <h4>Lorem ipsum dolor sit.</h4>
+                    <ul class="small">
+                        <li>
+                            <a href="#"><img src="tutu/ife_0005s_0001s_0000s_0001s_0000s_0000_Facebook-Icon.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="tutu/ife_0005s_0001s_0000s_0001s_0001s_0000_Twitter-Icon.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="tutu/ife_0005s_0001s_0000s_0001s_0002s_0000_Instagram-Icon.png" alt=""></a>
+                        </li>
+                    </ul>
+
+                </div></li>
+            <li><img src="tutu/ife_0005s_0001s_0003s_0000_沈大师大_meitu_3.png" alt="">
+                <div class="mask">
+                    <h1>Ethan Dutton</h1>
+                    <h4>Lorem ipsum dolor sit.</h4>
+                    <ul class="small">
+                        <li>
+                            <a href="#"><img src="tutu/ife_0005s_0001s_0000s_0001s_0000s_0000_Facebook-Icon.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="tutu/ife_0005s_0001s_0000s_0001s_0001s_0000_Twitter-Icon.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="tutu/ife_0005s_0001s_0000s_0001s_0002s_0000_Instagram-Icon.png" alt=""></a>
+                        </li>
+                    </ul>
+
+                </div></li>
+        </ul>
+    </div>
+</section>
+<section class="contacts">
+    <div class="center">
+        <div class="connect1">
+            <form>
+                <h3>FELL FREE WRITE US</h3>
+                <input type="text" name="" id="" placeholder="E-mail">
+                <input type="text" name="" id="" placeholder="Subject">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                <input type="submit" value="SEND">
+            </form>
+        </div>
+        <div class="connect2">
+            <h1>Contacts</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eaque eos esse et exercitationem fugiat
+                maxime necessitatibus repudiandae tempora tenetur!</p>
+            <ul>
+                <li>
+                    <img src="tutu/ife_0006s_0001s_0002s_0000_Map-Icon.png" alt="">
+                    <div>
+                        <p>360 King Street</p>
+                        <p>Feastrvale Trevose,PA 19057</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="tutu/ife_0006s_0001s_0001s_0000_Phone-Icon.png" alt="">
+                    <p>(755)564-84-21</p>
+                </li>
+                <li>
+                    <img src="tutu/ife_0006s_0001s_0000s_0000_Mail-Icon.png" alt="">
+                    <p>youname@mail.com</p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<footer>
+    <div class="center">
+        <ul>
+            <li>
+                <h4>LEARN MORE</h4>
+                <ul>
+                    <li>FAQ</li>
+                    <li>Contact Us</li>
+                    <li>Live Chat</li>
+                    <li>Phone call</li>
+                </ul>
+            </li>
+            <li>
+                <h4>ABOUT US</h4>
+                <ul>
+                    <li>How it works</li>
+                    <li>Meeting tools</li>
+                    <li>Live streaming</li>
+                    <li>Contact method</li>
+                </ul>
+            </li>
+            <li>
+                <h4>SUPPORT</h4>
+                <ul>
+                    <li>About us</li>
+                    <li>Features</li>
+                    <li>Privacy police</li>
+                    <li>Terms & Conditions</li>
+                </ul>
+            </li>
+            <li>
+                <h4>ENJOY YOUR LIFE</h4>
+                <ul>
+                    <li>Great web UI kit for designers</li>
+                    <li>freelancers or business</li>
+                    <li><img src="tutu/ife_0007s_0001s_0000s_0000_Twitter-Icon.png" alt="">
+                        <img src="tutu/ife_0007s_0001s_0000s_0002_Google-Icon.png" alt="">
+                        <img src="tutu/ife_0007s_0001s_0000s_0001_Facebook-Icon.png" alt="">
+                        <img src="tutu/ife_0007s_0001s_0000s_0003_Tumbler-Icon.png" alt="">
+                        <img src="tutu/ife_0007s_0001s_0000s_0004_Pinterest-Icon.png" alt="">
+                        <img src="tutu/ife_0007s_0001s_0000s_0005_LinkedIn-Icon.png" alt="">
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
