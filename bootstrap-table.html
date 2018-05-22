@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table{
+            margin:100px auto;
+            width: 75vw;
+            text-align: center;
+            border-collapse: collapse;
+            overflow: hidden;
+        }
+        td,th {
+            padding:10px;
+            border-bottom: 1px solid #ccc;
+            line-height: 18px;
+            /*overflow: hidden;*/
+        }
+        thead th{
+            border-bottom: 2px solid #ccc;
+        }
+        .table-hover tbody tr:hover{
+            background-color: pink;
+        }
+        .table-hover tbody td {
+            position: relative;
+        }
+        .table-hover tbody td:hover:before{
+            content: '';
+            width: 100%;
+            /*height: 400%;*/
+            left:0;
+            position: absolute;
+            top:-999px;
+            background-color: pink;
+            bottom:-999px;
+            z-index:-1;
+            overflow: hidden;
+        }
+        .table-striped tbody tr:nth-child(odd){
+            background-color: pink;
+        }
+        
+        .table-bordered th,.table-bordered td{
+            border: 1px solid #ccc;
+            
+        }
+        .table-bordered th{
+            border-bottom: 2px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <caption>table</caption>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Handle</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+    </tr>
+    <tr>
+        <th>2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+    </tr>
+    <tr>
+        <th>3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+    </tr>
+    </tbody>
+</table>
+<table class="table-hover">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Handle</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+    </tr>
+    <tr>
+        <th>2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+    </tr>
+    <tr>
+        <th>3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+    </tr>
+    </tbody>
+</table>
+<table class="table-striped">
+    <caption>table</caption>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Handle</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+    </tr>
+    <tr>
+        <th>2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+    </tr>
+    <tr>
+        <th>3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+    </tr>
+    </tbody>
+</table>
+<table class="table-bordered">
+    <caption>table</caption>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Handle</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+    </tr>
+    <tr>
+        <th>2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+    </tr>
+    <tr>
+        <th>3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
