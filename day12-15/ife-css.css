@@ -1,0 +1,562 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    display:none;
+}
+html,body{
+    height: 100%;
+}
+body{
+    position: relative;
+}
+ul{
+    list-style:none;
+
+}
+a{
+    text-decoration: none;
+}
+
+.left .menu1 {
+    padding-top:20px;
+    width: 100px;
+    height: 100vh;
+    background-color: #1D2530;
+}
+
+.left .menu1 ul{
+
+}
+
+.left .menu1 ul li{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin:0 20px 20px 20px;
+}
+
+.left .menu1 ul li a {
+    display:inline-block;
+    width: 100%;
+    text-align: center;
+    line-height:60px;
+    
+}
+.left .menu1 ul li a img{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    vertical-align: middle;
+}
+.left .menu1 ul li:nth-child(4) a img{
+    width: 60px;
+    height: 60px;
+}
+
+.left .menu1 ul li:first-child{
+    background-color: #299DF4;
+}
+
+.left .menu1 ul li:nth-child(2){
+     background-color: #9480E1;
+
+ }
+
+.left .menu1 ul li:nth-child(3){
+    background-color: #E94B2E;
+
+}
+.left .menu1 .icons {
+    position: fixed;
+    bottom:20px;
+    left:20px;
+}
+.left .menu1 .icons i{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right:10px;
+}
+.left .menu1 .icons i a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: url("Grid.png");
+}
+.left .menu1 .icons i:last-child a{
+    background: url("Settings.png");
+
+}
+
+.left .menu2{
+    width: 250px;
+    height: 100vh;
+    background-color: #212D3B;
+    position: absolute;
+    top:0;
+    left:100px;
+    overflow-y: scroll;
+}
+.left .menu2 ul{
+    width: 100%;
+    padding:20px;
+
+
+}
+.left .menu2 ul li{
+    width: 100%;
+    line-height:36px;
+}
+.left .menu2 ul li.sales,
+.left .menu2 ul li.msg,
+.left .menu2 ul li.int{
+    position: relative;
+}
+
+.left .menu2 ul li.sales:after{
+    content: '54';
+    width: 32px;
+    height: 22px;
+    border-radius:10px;
+    background-color:#2094EB;
+    position: absolute;
+    right:0;
+    text-align:center;
+    line-height: 22px;
+    color: white;
+    
+}
+
+.left .menu2 ul li.msg:after{
+    content: '21';
+    width: 32px;
+    height: 22px;
+    border-radius:10px;
+    background-color:#2094EB;
+    position: absolute;
+    right:0;
+    text-align:center;
+    line-height: 22px;
+    color: white;
+
+}
+
+.left .menu2 ul li.int:after{
+    content: '!';
+    width: 22px;
+    height: 22px;
+    border-radius:50%;
+    background-color:#E12F21;
+    position: absolute;
+    right:0;
+    text-align:center;
+    line-height: 22px;
+    color: white;
+
+}
+
+.left .menu2 ul:not(:last-child) li:last-child{
+    height: 36px;
+    border-bottom:1px solid #B3BFCD;
+}
+
+.left .menu2 ul li a{
+    display: inline-block;
+    color: #B3BFCD;
+
+}
+
+.left .menu2 ul li h4 {
+    width:100%;
+    line-height: 56px;
+    color: #4E5A6A;
+    position: relative;
+}
+
+.left .menu2 ul li h4:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    right:0;
+    top:18px;
+    width: 16px;
+    height: 16px;
+    background: url("Settings.png");
+
+}
+
+.left .menu2 ul.list2 li a i{
+    display:inline-block;
+    width: 18px;
+    height: 16px;
+    background-image: url("Book%20of%20Wisdom.png");
+    background-repeat:no-repeat;
+    margin-right:5px;
+    vertical-align:middle;
+}
+
+.left .menu2 ul.list2 li:nth-child(3) i{
+    background-image: url("Video%20Camera.png");
+
+}
+
+.left .menu2 ul.list2 li:nth-child(4) i{
+    background-image: url("Painting.png");
+
+}
+.left .menu2 ul.list2 li:nth-child(5) i{
+    background-image: url("Chart.png");
+
+}
+
+.left .menu2 .goals{
+    padding:0 20px;
+    width: 250px;
+    height: 60px;
+    background-color:#212D3B;
+    position: fixed;
+    bottom:0;
+    left:100px;
+    color: white;
+}
+
+.left .menu2 .goals h4{
+    font-size: 15px;
+    text-align: justify;
+
+}
+
+.left .menu2 .goals span{
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: #2C3848;
+    position: relative;
+}
+
+.left .menu2 .goals span:before{
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: #8A74E1;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.right{
+    position: absolute;
+    top:0;
+    left:350px;
+    right:0;
+    bottom:0;
+}
+.right .message{
+    height: 80px;
+    padding: 0 30px;
+    line-height:80px;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    min-width: 970px;
+    
+}
+
+.right .headarea{
+    width: 224px;
+    padding:17px 0;
+    height: 80px;
+    position: fixed;
+    top:0;
+    right:0;
+
+}
+.right .headarea i{
+    position: relative;
+}
+.right .headarea i:after{
+    content: '';
+    display:block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: url("Status.png") no-repeat ;
+    position: absolute;
+    bottom:5px;
+    right:5px;
+}
+
+.right .headarea .wenzi{
+    display:inline-block;
+    vertical-align: top;
+    margin:auto 14px;
+
+}
+.right .headarea span{
+    vertical-align: 20px;
+    font-weight:bolder;
+    font-size: 16px;
+
+}
+
+.right .asideleft{
+    margin:80px 0 auto 0;
+    width: 400px;
+    padding:auto 30px;
+    display:flex;
+    flex-direction: column;
+}
+
+.right .asideleft .search {
+    height: 84px;
+    line-height:84px;
+    padding:0 30px;
+    position: relative;
+    border-right:1px solid #ccc;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+
+
+}
+
+.right .asideleft .search input{
+    height: 34px;
+    width: 100%;
+    border-radius: 5px;
+    padding:5px;
+    box-shadow: none ;
+}
+
+.right .asideleft .search i{
+    display:inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(fdj.png);
+    position: absolute;
+    right:40px;
+    bottom:32px;
+
+}
+
+
+.right .asideleft .shortmessages{
+    height:calc(100vh - 164px);
+    overflow-y: scroll;
+}
+
+.right .asideleft .shortmessages ul li{
+    height: 130px;
+    padding:18px 30px;
+    border:1px solid rgb(230,233,236);
+    border-left:none;
+    /*border-right:none;*/
+}
+
+.right .asideleft .shortmessages ul li .people{
+    width: 100%;
+    height: 46px;
+    display:flex;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.right .asideleft .shortmessages ul li .people:after{
+    position: absolute;
+    display: inline-block;
+    content: '3m';
+    color: #ccc;
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+.right .asideleft .shortmessages ul li .people>div{
+    margin-right:10px;
+    color: #ccc;
+}
+
+.right .asideleft .shortmessages ul li .people>div h4{
+    color: rgb(35,153,241);
+}
+
+
+.right .asideleft .shortmessages ul li p{
+    position: relative;
+}
+
+.right .asideleft .shortmessages ul li p:after{
+    content: '4';
+    width: 20px;
+    height: 20px;
+    background-color: rgb(35,153,241);
+    color: white;
+    border-radius: 50%;
+    right:0;
+    bottom:0;
+    display: inline-block;
+    text-align: center;
+    line-height:20px;
+    position: absolute;
+}
+
+.right .asideright {
+    border: 1px solid #ccc;
+    width:calc(100vw - 750px);
+    position: absolute;
+    top: 80px;
+    left:400px;
+}
+
+.right .asideright .header{
+    display: flex;
+    height: 80px;
+    line-height:80px;
+    margin:0 26px;
+    border-bottom:1px solid #ccc;
+}
+
+.right .asideright .header>div{
+    flex:1;
+}
+
+.right .asideright .header ul{
+    display: inline-block;
+    height: 36px;
+    vertical-align: middle;
+}
+
+.right .asideright .header ul li{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-left:-5px;
+}
+
+.right .asideright .header ul li img{
+    vertical-align: 18px;
+    display: inline-block;
+
+}
+
+.right .asideright .header .mass span{
+    margin-right:20px;
+}
+
+.right .asideright .header .bessie{
+    color: rgb(27,185,52);
+}
+.right .asideright .header .bessie span{
+    margin-right:20px;
+    color: #000;
+    font-weight:900;
+
+}
+.right .asideright .rightlists{
+    padding:30px 0;
+    /*border: 1px solid #000;*/
+    height:calc(100vh - 164px);
+    overflow-y: scroll;
+}
+
+.right .asideright .rightlists ul li{
+    display: flex;
+    margin-bottom:20px;
+    padding:0px 30px;
+}
+
+.right .asideright .rightlists ul li .listhead{
+    margin-right:20px;
+}
+
+.right .asideright .rightlists ul li[class]{
+    height: 2px;
+    background-color: #ccc;
+    margin:30px auto;
+    position: relative;
+}
+
+.right .asideright .rightlists ul li.line1:before{
+    content: 'Tuesday';
+    position: absolute;
+    top:-10px;
+    left:300px;
+    background-color: white;
+}
+.right .asideright .rightlists ul li.line2 {
+    background-color: rgb(35,153,241);
+}
+.right .asideright .rightlists ul li.line2:before{
+    content: 'New Messages';
+    position: absolute;
+    top:-10px;
+    left:300px;
+    background-color: white;
+    color: rgb(35,153,241);
+}
+
+.right .asideright .rightlists ul li .twopic {
+    margin:20px 0;
+}
+
+.right .asideright .rightlists ul li .twopic>div {
+    display: inline-block;
+    position: relative;
+}
+
+.right .asideright .rightlists ul li .twopic>div:hover .mask1{
+    display: inline-block;
+}
+.right .asideright .rightlists ul li .twopic .mask1{
+    display: inline-block;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 156px;
+    height: 100px;
+    background-color: rgba(0,0,0,0.5);
+    background-image: url(Open%20icon.png);
+    background-repeat:no-repeat;
+    background-position: center;
+    display:none;
+}
+
+
+
+.right .asideright .rightlists ul li .twopic a{
+    /*display: inline-block;*/
+    margin-right:20px;
+    position: relative;
+}
+
+.right .asideright .rightlists ul li .twopic a:after {
+    position: absolute;
+    content: '';
+    width: 156px;
+    height: 100px;
+    background-image:;
+}
+
+.right .asideright .rightlists ul li:last-child span{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    color: black;
+    border-radius: 5px;
+    line-height:50px;
+}
+
+.right .asideright .rightlists ul li:last-child input{
+    width:calc(100% - 50px);
+    height: 50px;
+    padding-left:5px;
+    margin-left:-1px;
+
+
+}
