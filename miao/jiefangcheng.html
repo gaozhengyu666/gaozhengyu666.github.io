@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//    作业：
+//    对于一元二次方程：
+//    分三种情况
+//    有两个不同的根的时候输出x1=,x2=
+//            两个根相同的时候，输出x=
+//            没有实数根的时候，输出其两个复数根。
+
+    var a = +prompt("a:");
+    var b = +prompt("b:");
+    var c = +prompt("c:");
+    var delta = b * b - 4 * a * c;
+    var s_delta = Math.sqrt(delta);
+
+    if (delta > 0){
+        var x1 = (-b + s_delta) / (2 * a);
+        var x2 = (-b - s_delta) / (2 * a);
+        console.log("x1="+x1+",x2="+x2)
+    } else if(delta = 0){
+        var x = (-b)/(2*a);
+        console.log("x="+x)
+
+    } else {
+//        delta = delta* -1;
+        delta =-b * b + 4 * a * c;
+        s_delta = Math.sqrt(delta);
+//        alert(delta)
+        var x1 = -b / (2 * a)+"+"+(s_delta)/(2 * a)+"i";
+        var x2 = -b / (2 * a)+"-"+(s_delta)/(2 * a)+"i";
+        console.log("x1="+x1+",x2="+x2)
+
+    }
+//作业：
+//对于二元一次方程
+//有唯一解时，输出x和y的值
+//没有唯一解时，输出“无唯一解”/“有无穷个解”
+
+    var a1 = +prompt("a1:");
+    var b1 = +prompt("b1:");
+    var c1 = +prompt("c1:");
+    var a2 = +prompt("a2:");
+    var b2 = +prompt("b2:");
+    var c2 = +prompt("c2:");
+    var k1 = a1 / a2;
+    var k2 = b1 / b2;
+    var k3 = c1 / c2;
+    if (k1 == k2 ){
+        if (k1 == k3){
+            console.log("方程有无数解")
+
+        }else{
+            console.log("方程无解")
+        }
+    }else (
+            console.log("方程有唯一解")
+    )
+
+
+
+
+
+
+
+</script>
+<script type="xxx">
+//    debugger
+    var n = Number(prompt("please input a number"))
+    if(n < 10){
+        alert("small");
+    }else {
+        if (n < 100){
+            alert("medium")
+
+        }else {
+            alert("large")
+        }
+    }
+
+    console.log("done")
+</script>
+
+</body>
+</html>
