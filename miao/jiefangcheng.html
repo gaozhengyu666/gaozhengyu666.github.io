@@ -41,7 +41,7 @@
 //对于二元一次方程
 //有唯一解时，输出x和y的值
 //没有唯一解时，输出“无唯一解”/“有无穷个解”
-
+//a1x+b1y=c1    a2x+b2y=c2
     var a1 = +prompt("a1:");
     var b1 = +prompt("b1:");
     var c1 = +prompt("c1:");
@@ -54,14 +54,14 @@
     if (k1 == k2 ){
         if (k1 == k3){
             console.log("方程有无数解")
-
         }else{
             console.log("方程无解")
         }
     }else (
             console.log("方程有唯一解")
+            console.log("x="+(b2 * c1 - b1 * c2 ) / (a1 * b2 - a2 * b1 ))
+            console.log("y="+(a2 * c1 - a1 * c2 ) / (a2 * b1 - a1 * b2 ))
     )
-
 
 
 
