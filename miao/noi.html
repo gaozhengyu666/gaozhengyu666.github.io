@@ -36,7 +36,7 @@
 		}
 		ave1 = sum / num
 		ave = ave1.toFixed(4);
-		console.log(ave.toFixed(4))
+		console.log(ave)
 
 		</script>
 		<script id="ch0105/04" type="xxx">
@@ -132,21 +132,21 @@
 			var sum = 0
 			if ( num1 % 2 == 1) {
 
-			for ( num1;num1 < num2;num1 += 2) {
-			sum = sum  + num1
+				for ( num1;num1 <= num2;num1 += 2) {
+					sum = sum  + num1
 
-		}
-		} else {
-		num1 ++
-		for ( num1;num1 < num2;num1 += 2) {
-		sum = sum  + num1
+				}
+			} else {
+				num1 ++
+				for ( num1;num1 <= num2;num1 += 2) {
+					sum = sum  + num1
 
-		}
+				}
 
-		}
+			}
 
 
-		console.log(sum)
+			console.log(sum)
 
 		</script>
 		<script id="ch0105/10" type="xxx">
@@ -256,12 +256,13 @@
 			var n=parseInt(prompt('请输入一个数字'));
 			var a1=1;
 			var a2=1;
-			var a3=0;
-			for(var i=2;i<=n;i++){
-
+			var a3;
+			for(var i=3;i<=n;i++){
 				a3=a1+a2;//第三个数等于第一个数加上第二个数
-				a1=a2;//第一个数就变成了之前的第二个数
-				a2=a3;//第二个数就变成了刚刚的第三个数
+				a1 = a2
+				a2 = a3
+				
+				
 			}
 			console.log(a3);
 		</script>
@@ -306,8 +307,8 @@
 				height = 0.5 * height
 				totalHeight = totalHeight + height*2
 			}
-			console.log(height/2)
 			console.log(totalHeight)
+			console.log(height/2)
 
 		</script>
 
@@ -384,7 +385,7 @@
 			console.log(result.toFixed(2))
 			
 		</script>
-		<script id="ch0103/11" xtype="xxx">
+		<script id="ch0103/11" type="xxx">
 			var a = +prompt("输入数字a")
 			var b = +prompt("输入数字b")
 			var k = 1
@@ -661,9 +662,9 @@
 			var a2 = +prompt("a2")
 			var a3 = +prompt("a3")
 			if ((a1 + a2) > a3 && Math.abs(a1 - a2) < a3) {
-				console.log("YES")
+				console.log("yes")
 			} else {
-				console.log("NO")
+				console.log("no")
 			}
 		</script>
 		<script id="ch0104/17" type="xxx">
