@@ -40,6 +40,49 @@ reverse: function(array) {
   }
   return newArr
 },
+flatten: function (array) {
+  var newArr = []
+  for (var i = 0; i < array.length ;i++) {
+    if(!Array.isArray(array[i])) {
+      newArr.push(array[i])
+    } else {
+      for (var j = 0 ; j < array[i].length ; j++) {
+        newArr.push(array[i][j])
+      }
+    }
+  }
+  return newArr
+},
+flattenDeep: function(ary){
+  var result = []
+  for (var i = 0 ; i < ary.length;i++) {
+    if (Array.isArray(ary[i])) {
+      var temp = flattenDeep(ary[i]) 
+      result = [...result,...temp]
+
+    } else {
+      result.push(ary[i])
+    }
+  }
+  return result
+},
+flattenDepth: function (ary,depth) {
+  if (depth === 0) {
+    return ary
+  }
+   var result = []
+  for (var i = 0 ; i < ary.length;i++) {
+    if (Array.isArray(ary[i])) {
+      var temp = flattenDepth(ary[i],depth -1) 
+      result = [...result,...temp]
+
+    } else {
+      result.push(ary[i])
+    }
+  }
+  return result
+},
+
 
 
 
