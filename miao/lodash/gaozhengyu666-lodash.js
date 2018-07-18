@@ -28,6 +28,19 @@ difference: function(array,...theAgrs) {
     
   
 },
+sum: function(array) {
+  return array.reduce(function(pre,item){
+    return pre + item
+  })
+},
+reverse: function(array) {
+  var newArr = []
+  for (var i = array.length - 1; i >= 0 ;i--) {
+    newArr.push(array[i])
+  }
+  return newArr
+},
+
 
 
 
