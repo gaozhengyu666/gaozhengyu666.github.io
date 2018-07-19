@@ -57,7 +57,7 @@ flattenDeep: function(ary){
   var result = []
   for (var i = 0 ; i < ary.length;i++) {
     if (Array.isArray(ary[i])) {
-      var temp = flattenDeep(ary[i]) 
+      var temp = gaozhengyu666.flattenDeep(ary[i]) 
       result = [...result,...temp]
 
     } else {
@@ -73,7 +73,7 @@ flattenDepth: function (ary,depth) {
    var result = []
   for (var i = 0 ; i < ary.length;i++) {
     if (Array.isArray(ary[i])) {
-      var temp = flattenDepth(ary[i],depth -1) 
+      var temp = gaozhengyu666.flattenDepth(ary[i],depth -1) 
       result = [...result,...temp]
 
     } else {
