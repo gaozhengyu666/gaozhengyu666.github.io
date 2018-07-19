@@ -147,13 +147,16 @@ var gaozhengyu666 = {
   },
   join: function (array,separator = ",") {
     return array.reduce(function(result,item){
-      return result+separator+item
+      return result+""+separator+""+item
     })
   },
   last: function (array) {
     return array[array.length - 1]
   },
   lastIndexOf: function (array, value, fromIndex) {
+    if (fromIndex < 0) {
+      return -1
+    }
     if ( fromIndex === undefined) {
       for (var i = array.length - 1; i >= 0; i--) {
         if ( array[i] === value) {
