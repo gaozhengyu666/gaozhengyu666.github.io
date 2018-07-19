@@ -84,7 +84,127 @@ var gaozhengyu666 = {
   },
   drop: function (array, n = 1) {
     return array.slice(n)
+  },
+  dropRight:function (array, n = 1) {
+    array.splice(array.length - n)
+    return array
+  },
+
+  fill: function (array, value, start= 0, end){
+    end = end || array.length
+    for (var i = start ; i < end; i++) {
+      array[i] = value
+    }
+    return array
+  },
+  fromPairs: function (array) {
+    var obj = {}
+    for (var i = 0; i < array.length ; i++) {
+      obj[array[i][0]] = array[i][1]
+    }
+    return obj
+  },
+  head: function(array) {
+    return array[0]
+  },
+  indexOf: function(array, value, fromIndex = 0) {
+    for (var i = fromIndex; i < array.length; i++) {
+      if (array[i] === value){
+        return i
+      }
+    }
+    return -1
+  },
+  initial: function(array) {
+    return array.slice(0,array.length -1)
+  },
+  intersection: function(...args) {
+    return [...args].reduce(function(a,b){
+      var temp =[]
+
+      if (a.length >= b.length) {
+        for (var i =0; i < b.length; i ++){
+          for (var j = 0; j < a.length; j++){
+            if (b[i] == a[j]){
+              temp.push(b[i])
+              break
+            }
+          }
+        }
+      } else {
+        for (var i =0; i < a.length; i ++){
+          for (var j = 0; j < b.length; j++){
+            if (a[i] == b[j]){
+              temp.push(a[i])
+              break
+            }
+          }
+        }
+      }
+      return temp
+
+    })
+  },
+  join: function (array,separator = ",") {
+    return array.reduce(function(result,item){
+      return result+separator+item
+    })
+  },
+  last: function (array) {
+    return array[array.length - 1]
+  },
+  lastIndexOf: function (array, value, fromIndex) {
+    if ( fromIndex === undefined) {
+      for (var i = array.length - 1; i >= 0; i--) {
+        if ( array[i] === value) {
+          return i
+        }
+      }
+      return -1 
+    }
+    array = array.slice(0,array.length - fromIndex)
+    for (var i = array.length - 1; i >= 0; i--) {
+        if ( array[i] === value) {
+          return i
+        }
+      }
+      return -1 
+  },
+  pull: function (array,...value) {
+    var result = []
+    for (var i = 0; i < value.length; i++) {
+      for (var j = 0; j < array.length; j++) {
+        if (array[j] != value[i]) {
+          result.push(array[j])
+        }
+      }
+      array = result
+      result = []
+    }
+    return array
   }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
