@@ -86,7 +86,7 @@ var gaozhengyu666 = {
     return array.slice(n)
   },
   dropRight:function (array, n = 1) {
-    if (n > array.length) {
+    if (n >= array.length) {
       return []
     }
     array.splice(array.length - n)
