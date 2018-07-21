@@ -220,7 +220,7 @@ var gaozhengyu666 = {
   take: function (array,n = 1) {
     
     return array.slice(0,n)
-  }
+  },
 
   takeRight: function (array, n=1) {
 
@@ -253,7 +253,7 @@ var gaozhengyu666 = {
     return array.filter(function(item){
       return !value.includes(item)
     })
-  }
+  },
 
   xor: function(...arys) {
     var obj = {}
@@ -274,7 +274,7 @@ var gaozhengyu666 = {
       }
     }
     return newArr
-  }
+  },
 
 
     
