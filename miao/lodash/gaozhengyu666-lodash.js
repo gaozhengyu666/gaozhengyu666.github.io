@@ -195,7 +195,87 @@ var gaozhengyu666 = {
     } else {
       return array[array.length + n]
     }
+  },
+  pullAll: function (array,target) {
+   return array.filter(function (item){
+      return !target.includes(item)
+    })
+  },
+  sortedIndex: function(array,value) {
+    if (array[0] >= value) {
+      return 0
+    }
+    if (array[array.length -1] < value) {
+      return array.length
+    }
+    for (var i=0 ; i < array.length; i++) {
+      if (array[i] >= value) {
+        return i
+      } 
+    }
+  },
+  tail: function (array) {
+    return array.slice(1)
+  },
+  take: function (array,n = 1) {
+    
+    return array.slice(0,n)
   }
+
+  takeRight: function a(array, n=1) {
+
+    if (n>=array.length) {
+        return array
+    }
+    var newArr = []
+    var count = 0
+    for (var i = array.length-1 ; count < n; i--) {
+        count++
+      newArr.push(array[i])
+    }
+    return newArr.reverse()
+
+  },
+  uniq: function(array) {
+    var obj = {}
+    var newArr = []
+    for (var i = 0; i < array.length; i++) {
+      if (array[i] in obj) {
+
+      } else {
+        obj[array[i]] = 1
+        newArr.push(array[i])
+      }
+    }
+    return newArr
+  },
+  without: function (array, ...value) {
+    return array.filter(function(item){
+      return !value.includes(item)
+    })
+  }
+
+  xor: function(...arys) {
+    var obj = {}
+    var newArr =[]
+    arys.reduce(function(result,item){
+      return result = result.concat(item)
+    },[]).forEach(function(value){
+      if(value in obj) {
+          obj[value]++
+      } else {
+        obj[value] = 1
+      }
+
+    })
+    for (key in obj) {
+      if (obj[key] ===1){
+        newArr.push(+key)
+      }
+    }
+    return newArr
+  }
+
 
     
 
