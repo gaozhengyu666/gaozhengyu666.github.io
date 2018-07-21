@@ -222,7 +222,7 @@ var gaozhengyu666 = {
     return array.slice(0,n)
   }
 
-  takeRight: function a(array, n=1) {
+  takeRight: function (array, n=1) {
 
     if (n>=array.length) {
         return array
