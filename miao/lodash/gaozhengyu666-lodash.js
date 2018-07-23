@@ -284,12 +284,12 @@ var gaozhengyu666 = {
       if (Array.isArray(item)) {
         newArr.push(...item)
       } else {
-        newArr.pusj(item)
+        newArr.push(item)
       }
     }
     return newArr
   },
-  matchs: function (source) {
+  matches: function (source) {
     return function (obj) {
       for (var item in source) {
         if (source[item] != obj[item]) {
