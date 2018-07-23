@@ -275,6 +275,32 @@ var gaozhengyu666 = {
     }
     return newArr
   },
+  identity: function ( value) {
+    return value
+  },
+  concat: function(array,...value) {
+    var newArr = []
+    for (var item of arguments) {
+      if (Array.isArray(item)) {
+        newArr.push(...item)
+      } else {
+        newArr.pusj(item)
+      }
+    }
+    return newArr
+  },
+  matchs: function (source) {
+    return function (obj) {
+      for (var item in source) {
+        if (source[item] != obj[item]) {
+          return false
+        }
+      
+      }
+      return true
+    }
+    
+  }
 
 
     
