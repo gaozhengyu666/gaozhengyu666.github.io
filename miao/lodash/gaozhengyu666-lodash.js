@@ -84,7 +84,22 @@ var gaozhengyu666 = {
   },
   drop: function (array, n = 1) {
     return array.slice(n)
-  }
+  },
+  pullAt: function (array,...args) {
+    var argslength = args.length
+    var ary = []
+    var newary = []
+    for (var i = 0; i < argslength; i++) {
+      ary.push(array[[args[i]]])
+    }
+    for (var j = 0; j < array.length; j++){
+      for(var key of ary) {
+        newary.push(array[i])
+      }
+    }
+    array = newary
+    return ary
+  },
 
 
 }
