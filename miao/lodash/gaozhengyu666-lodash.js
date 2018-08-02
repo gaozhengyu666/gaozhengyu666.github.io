@@ -85,7 +85,7 @@ var gaozhengyu666 = {
   drop: function (array, n = 1) {
     return array.slice(n)
   },
-<<<<<<< HEAD
+
   pullAt: function (array,...args) {
     var argslength = args.length
     var ary = []
@@ -101,7 +101,7 @@ var gaozhengyu666 = {
     array = newary
     return ary
   },
-=======
+
   dropRight:function (array, n = 1) {
     if (n >= array.length) {
       return []
@@ -317,8 +317,8 @@ var gaozhengyu666 = {
       return true
     }
     
-  }
->>>>>>> b1d175a299dc30e71ae577da2b8f800a2c7ae59f
+  },
+
 
 
     
